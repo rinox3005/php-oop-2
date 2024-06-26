@@ -9,9 +9,9 @@ class CatProduct extends Product
 
     protected string $category = "Cat";
 
-    public function __construct(string $image, string $name, string $description, float $price, int $quantity)
+    public function __construct(string $image, string $name, string $description, float $price, int $stock)
     {
-        parent::__construct($image, $name, $description, $price, $quantity);
-        $this->setAvailability($quantity);
+        parent::__construct($image, $name, $description, $price, $stock);
+        $this->setAvailability($stock);
     }
 }

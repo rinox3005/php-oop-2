@@ -9,17 +9,17 @@ class Product
     protected string $name;
     protected string $description;
     protected float $price;
-    protected int $quantity;
+    protected int $stock;
 
     // Costruttore del mio prodotto
-    public function __construct(string $image, string $name, string $description, float $price, int $quantity)
+    public function __construct(string $image, string $name, string $description, float $price, int $stock)
     {
         $this->productId = self::$id++;
         $this->image = $image;
         $this->name = $name;
         $this->description = $description;
         $this->price = $price;
-        $this->quantity = $quantity;
+        $this->stock = $stock;
     }
 
     // Metodi getter delle mie variabili d'istanza
@@ -48,9 +48,9 @@ class Product
         return $this->price;
     }
 
-    public function getQuantity()
+    public function getStock()
     {
-        return $this->quantity;
+        return $this->stock;
     }
 
     // Metodi setter delle mie variabili d'istanza
@@ -78,9 +78,9 @@ class Product
         return $this;
     }
 
-    public function setQuantity(int $quantity)
+    public function setStock(int $stock)
     {
-        $this->quantity = $quantity;
+        $this->stock = $stock;
         return $this;
     }
 }

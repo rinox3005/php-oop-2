@@ -3,3 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  width: 300px;
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+.product-card img {
+  max-width: 200px;
+}

@@ -11,9 +11,9 @@ trait Availability
     }
 
     // Metodo setter
-    public function setAvailability(int $quantity): void
+    public function setAvailability(int $stock): void
     {
-        if ($quantity == 0) {
+        if ($stock == 0) {
             $this->availability = false;
         } else {
             $this->availability = true;
