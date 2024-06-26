@@ -8,16 +8,19 @@ class Product
     protected string $image;
     protected string $name;
     protected string $description;
+    protected string $type;
     protected float $price;
     protected int $stock;
 
+
     // Costruttore del mio prodotto
-    public function __construct(string $image, string $name, string $description, float $price, int $stock)
+    public function __construct(string $image, string $name, string $description, string $type, float $price, int $stock)
     {
         $this->productId = self::$id++;
         $this->image = $image;
         $this->name = $name;
         $this->description = $description;
+        $this->type = $type;
         $this->price = $price;
         $this->stock = $stock;
     }
@@ -41,6 +44,11 @@ class Product
     public function getDescription()
     {
         return $this->description;
+    }
+
+    public function getType()
+    {
+        return $this->type;
     }
 
     public function getPrice()
@@ -69,6 +77,12 @@ class Product
     public function setDescription(string $description)
     {
         $this->description = $description;
+        return $this;
+    }
+    public function setType(string $type)
+    {
+        $this->type = $type;
+
         return $this;
     }
 
