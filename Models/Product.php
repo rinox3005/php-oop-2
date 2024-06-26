@@ -2,21 +2,21 @@
 
 class Product
 {
-    // Dichiarazioni variabili d'istanza protected
     protected string $image;
     protected string $name;
     protected string $description;
     protected int $price;
+    protected int $quantity;
 
-
-    public function __construct(string $image, string $name, string $description, int $price)
+    public function __construct(string $image, string $name, string $description, int $price, int $quantity)
     {
         $this->image = $image;
         $this->name = $name;
         $this->description = $description;
         $this->price = $price;
+        $this->quantity = $quantity;
     }
-    // Metodi getter delle variabili
+
     public function getImage()
     {
         return $this->image;
@@ -37,33 +37,38 @@ class Product
         return $this->price;
     }
 
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
 
-    // Metodi setter delle variabili
-    public function setImage($image)
+    public function setImage(string $image)
     {
         $this->image = $image;
-
         return $this;
     }
 
-    public function setName($name)
+    public function setName(string $name)
     {
         $this->name = $name;
-
         return $this;
     }
 
-    public function setDescription($description)
+    public function setDescription(string $description)
     {
         $this->description = $description;
-
         return $this;
     }
 
-    public function setPrice($price)
+    public function setPrice(int $price)
     {
         $this->price = $price;
+        return $this;
+    }
 
+    public function setQuantity(int $quantity)
+    {
+        $this->quantity = $quantity;
         return $this;
     }
 }
