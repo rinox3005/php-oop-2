@@ -15,8 +15,10 @@ trait Availability
     {
         if ($stock == 0) {
             $this->availability = false;
-        } else {
+        } else if ($stock > 0) {
             $this->availability = true;
+        } else {
+            throw new Exception("The stock availability must be a positive number");
         }
     }
 }
